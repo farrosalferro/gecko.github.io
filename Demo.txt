@@ -1,3 +1,1 @@
-Since I'm having trouble deploying the demo in HuggingFace's Space,
-I will run it locally on the day before and during the presentation day: August 18th-19th
-Thank you for the patience :)
+Still working on it :)
