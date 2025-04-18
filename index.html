@@ -114,7 +114,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><img id="gecko" width="6%" src="gecko.png"> Guidance from Keyword
+            <h1 class="title is-1 publication-title"> Gecko: Guidance from Keyword
               for Identifying Small Details in High-Resolution Images with Vision-Language Models</h1>
             <h3 class="title is-3 publication-title">Undergraduate Thesis</h3>
             <div class="is-size-5 publication-authors">
@@ -164,16 +164,16 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="Undergraduate_Thesis_Preprint.pdf" target="_blank"
+                  <!-- <a href="Undergraduate_Thesis_Preprint.pdf" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i style="font-size:16px" class="fa">&#xf1c1;</i>
                     </span>
                     <span>Preprint</span>
                   </a>
-                </span>
+                </span> -->
                 <span class="link-block">
-                  <a href="Thesis.txt" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="thesis.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i style="font-size:16px" class="fa">&#xf1c1;</i>
                     </span>
@@ -190,6 +190,15 @@
                   </a>
                 </span>
                 <span class="link-block">
+                  <a href="https://huggingface.co/collections/farrosalferro24/gecko-66d9596ead2d8eb9febe2a0f" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i style="font-size:16px" class="fas fa-share-square"></i>
+                    </span>
+                    <span>Model</span>
+                  </a>
+                </span>
+                <!-- <span class="link-block">
                   <a href="https://96e265b88302fbdaba.gradio.live/" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -197,9 +206,9 @@
                     </span>
                     <span>Demo</span>
                   </a>
-                </span>
+                </span> -->
                 <span class="link-block">
-                  <a href="https://drive.google.com/drive/folders/1YbIIijyaXGxn_fxZpmaB-wEwH4J4qXZn?usp=sharing"
+                  <a href="https://huggingface.co/datasets/farrosalferro24/multi_vstar_bench"
                     target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-database"></i>
@@ -224,7 +233,7 @@
       </div>
     </div>
   </section>
-
+<!-- 
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
@@ -234,7 +243,7 @@
             href='https://vstar-seal.github.io/'>V* Bench</a> compared to both open-source and proprietary models.
         </h4>
         <figure style="text-align: center;">
-          <img src="static/images/Quantitative Results.png" alt="Quantitative results on V* Bench">
+          <img src="static/images/Quantitative_Results_V_Star.png" alt="Quantitative results on V* Bench" width="800">
           <figcaption>Evaluation of vision language models on <a href='https://vstar-seal.github.io/'>V* Bench</a>.
             <strong>Best</strong> results are in bold, and the <u>second-best</u> performances are underlined. &Dagger;
             indicates our base model with their respective vision encoder.
@@ -243,30 +252,223 @@
 
       </div>
     </div>
-  </section>
+  </section> -->
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <h4 class="subtitle has-text-centered">
+            🔥 We propose plug-and-play modules that can be attached to a Vision Language Model, enabling the model to
+            effectively identify small objects in high-resolution images. Our models achieve competitive results on the <a
+              href="https://vstar-seal.github.io/">V* Bench</a> compared to both open-source and proprietary models.
+          </h4>
+    
+          <div style="overflow-x:auto; margin-top:2rem;">
+            <table style="width:100%; border-collapse: collapse; text-align: center;">
+              <thead>
+                <tr>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">Method</th>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">Attribute (%)↑</th>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">Spatial (%)↑</th>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">Overall (%)↑</th>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">Inference Time (sample/s)↓</th>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">Training</th>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">External Models</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding:8px;">Human</td>
+                  <td style="padding:8px;">98.26</td>
+                  <td style="padding:8px;">100.00</td>
+                  <td style="padding:8px;">98.95</td>
+                  <td style="padding:8px;">–</td>
+                  <td style="padding:8px;">–</td>
+                  <td style="padding:8px;">–</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;">Random Guess</td>
+                  <td style="padding:8px;">26.73</td>
+                  <td style="padding:8px;">50.00</td>
+                  <td style="padding:8px;">35.99</td>
+                  <td style="padding:8px;">–</td>
+                  <td style="padding:8px;">–</td>
+                  <td style="padding:8px;">–</td>
+                </tr>
+                <tr>
+                  <td colspan="7" style="padding:8px; text-align:middle; font-style:italic; border-top:1px solid #4c4c4c; margin-top:1rem;">Open‑source models</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2310.03744">LLaVA‑1.5</a></td>
+                  <td style="padding:8px;">44.35</td>
+                  <td style="padding:8px;">52.63</td>
+                  <td style="padding:8px;">47.64</td>
+                  <td style="padding:8px;">0.314</td>
+                  <td style="padding:8px;">✓</td>
+                  <td style="padding:8px;">×</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2405.01483">Mantis‑CLIP ‡</a></td>
+                  <td style="padding:8px;">35.65</td>
+                  <td style="padding:8px;">61.84</td>
+                  <td style="padding:8px;">46.07</td>
+                  <td style="padding:8px;"><strong>0.257</strong></td>
+                  <td style="padding:8px;">✓</td>
+                  <td style="padding:8px;">×</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2405.01483">Mantis‑SigLIP</a></td>
+                  <td style="padding:8px;">33.04</td>
+                  <td style="padding:8px;">59.21</td>
+                  <td style="padding:8px;">43.46</td>
+                  <td style="padding:8px;"><u>0.295</u></td>
+                  <td style="padding:8px;">✓</td>
+                  <td style="padding:8px;">×</td>
+                </tr>
+                <tr>
+                  <td colspan="7" style="padding:8px; text-align:middle; font-style:italic;">High resolution models</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2403.18814">Mini‑Gemini 8B</a></td>
+                  <td style="padding:8px;">60.87</td>
+                  <td style="padding:8px;">63.16</td>
+                  <td style="padding:8px;">61.78</td>
+                  <td style="padding:8px;">1.218</td>
+                  <td style="padding:8px;">✓</td>
+                  <td style="padding:8px;">×</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2406.00977">Dragonfly 8B</a></td>
+                  <td style="padding:8px;">49.57</td>
+                  <td style="padding:8px;">52.63</td>
+                  <td style="padding:8px;">50.79</td>
+                  <td style="padding:8px;">2.865</td>
+                  <td style="padding:8px;">✓</td>
+                  <td style="padding:8px;">×</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2405.02246">Idefics2 8B</a></td>
+                  <td style="padding:8px;">54.78</td>
+                  <td style="padding:8px;">56.58</td>
+                  <td style="padding:8px;">55.49</td>
+                  <td style="padding:8px;">1.657</td>
+                  <td style="padding:8px;">✓</td>
+                  <td style="padding:8px;">×</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://llava-vl.github.io/blog/2024-05-10-llava-next-stronger-llms/">LLaVA‑NeXT 8B</a></td>
+                  <td style="padding:8px;">60.87</td>
+                  <td style="padding:8px;">61.84</td>
+                  <td style="padding:8px;">61.26</td>
+                  <td style="padding:8px;">1.149</td>
+                  <td style="padding:8px;">✓</td>
+                  <td style="padding:8px;">×</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2403.03003">LLaVA‑HR </a></td>
+                  <td style="padding:8px;">46.09</td>
+                  <td style="padding:8px;">52.63</td>
+                  <td style="padding:8px;">48.69</td>
+                  <td style="padding:8px;">0.554</td>
+                  <td style="padding:8px;">✓</td>
+                  <td style="padding:8px;">×</td>
+                </tr>
+                <tr>
+                  <td colspan="7" style="padding:8px; text-align:middle; font-style:italic; border-top:1px solid #4c4c4c; margin-top:1rem;">Tool‑using models</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2312.14135">SEAL (SOTA)</a></td>
+                  <td style="padding:8px;"><strong>77.39</strong></td>
+                  <td style="padding:8px;"><strong>77.63</strong></td>
+                  <td style="padding:8px;"><strong>77.48</strong></td>
+                  <td style="padding:8px;">94.25</td>
+                  <td style="padding:8px;">✓</td>
+                  <td style="padding:8px;">✓</td>
+                </tr>
+                <tr>
+                  <td colspan="7" style="padding:8px; text-align:middle; font-style:italic; border-top:1px solid #4c4c4c; margin-top:1rem;">Private models</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2303.08774">GPT‑4V Preview</a></td>
+                  <td style="padding:8px;">42.61</td>
+                  <td style="padding:8px;">46.05</td>
+                  <td style="padding:8px;">43.98</td>
+                  <td style="padding:8px;">–</td>
+                  <td style="padding:8px;">–</td>
+                  <td style="padding:8px;">–</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2303.08774">GPT‑4 Turbo</a></td>
+                  <td style="padding:8px;">46.09</td>
+                  <td style="padding:8px;">53.95</td>
+                  <td style="padding:8px;">49.21</td>
+                  <td style="padding:8px;">–</td>
+                  <td style="padding:8px;">–</td>
+                  <td style="padding:8px;">–</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2303.08774">GPT‑4o</a></td>
+                  <td style="padding:8px;"><u>69.57</u></td>
+                  <td style="padding:8px;">52.63</td>
+                  <td style="padding:8px;"><u>62.83</u></td>
+                  <td style="padding:8px;">–</td>
+                  <td style="padding:8px;">–</td>
+                  <td style="padding:8px;">–</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2303.08774">GPT‑4o Mini</a></td>
+                  <td style="padding:8px;">49.57</td>
+                  <td style="padding:8px;"><u>63.16</u></td>
+                  <td style="padding:8px;">54.97</td>
+                  <td style="padding:8px;">–</td>
+                  <td style="padding:8px;">–</td>
+                  <td style="padding:8px;">–</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;">Ours‑CLIP</td>
+                  <td style="padding:8px;">52.17</td>
+                  <td style="padding:8px;">53.95</td>
+                  <td style="padding:8px;">52.88</td>
+                  <td style="padding:8px;">5.268</td>
+                  <td style="padding:8px;">×</td>
+                  <td style="padding:8px;">×</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;">Ours‑SigLIP</td>
+                  <td style="padding:8px;">63.48</td>
+                  <td style="padding:8px;">61.84</td>
+                  <td style="padding:8px;"><u>62.83</u></td>
+                  <td style="padding:8px;">5.479</td>
+                  <td style="padding:8px;">×</td>
+                  <td style="padding:8px;">×</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    
+        </div>
+      </div>
+    </section>
 
-  <section class="section" style="background-color:#efeff081">
+
+
+  <!-- <section class="section" style="background-color:#efeff081">
     <div class="container is-max-desktop" id="gradio">
       <gradio-app src="https://96e265b88302fbdaba.gradio.live/"></gradio-app>
     </div>
-  </section>
+  </section> -->
 
-  <!-- <section class="section"  style="background-color:#efeff081">
-    <div class="container is-max-desktop"> -->
+  <section class="section"  style="background-color:#efeff081">
+    <div class="container is-max-desktop">
   <!-- Abstract. -->
-  <!-- <div class="columns is-centered has-text-centered">
+  <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Instruction tuning large language models (LLMs) using machine-generated instruction-following data has improved zero-shot capabilities on new tasks in the language domain, but the idea is less explored in the multimodal field.
-              <ol type="1">
-                <li><b>Multimodal Instruct Data</b>. <span style="font-size: 95%;">We present the first attempt to use <a href="https://openai.com/research/gpt-4">language-only GPT-4</a> to generate multimodal language-image instruction-following data. </span></li>
-                <li><b>LLaVA Model</b>. <span style="font-size: 95%;">We introduce <it><b>LLaVA</b> (<b>L</b>arge <b>L</b>anguage-<b>a</b>nd-<b>V</b>ision <b>A</b>ssistant)</it>, an end-to-end trained large multimodal model that connects a vision encoder and LLM for general-purpose visual and language understanding.</li>
-                <li><b>Performance</b>. <span style="font-size: 95%;">Our early experiments show that LLaVA demonstrates impressive multimodel chat abilities, sometimes exhibiting the behaviors of multimodal GPT-4 on unseen images/instructions, and yields a 85.1% relative score compared with GPT-4 on a synthetic multimodal instruction-following dataset.
-                  When fine-tuned on <a href="https://scienceqa.github.io/">Science QA</a>, the synergy of LLaVA and GPT-4  achieves a new state-of-the-art accuracy of 92.53%.</li>
-                <li><b>Open-source</b>. <span style="font-size: 95%;">We make GPT-4 generated visual instruction tuning data, our model and code base publicly available.</li>
-              </ol>  
+              Recent vision and language models (VLMs) have demonstrated remarkable success, even surpassing human performance in certain tasks. However, these models struggle with recognizing small objects in high-resolution images. To address this limitation, a previous <a href="https://vstar-seal.github.io/">study</a> introduced a visual search method where VLMs iteratively search for clues to identify small target objects using fine-tuned vision modules. While this approach improves small object recognition, it incurs high inference times due to its iterative operations, extensive use of vision modules, and significant computational costs from training.
+           </p>
+           <p>
+              We propose a plug-and-play method that leverages pre-trained model weights without requiring external tools or additional training. This method capitalizes on the vision encoder’s inherent ability to contrast images and text, enabling it to selectively focus on image areas relevant to the queries. Consequently, this approach streamlines the process and reduces resource consumption.
            </p>
   
           </div>
@@ -274,7 +476,7 @@
       </div>
         
     </div>
-  </section> -->
+  </section>
 
 
 
@@ -416,49 +618,208 @@
 
 </section> -->
 
-
-  <!-- <section class="section"> -->
+<section class="section">
   <!-- Results. -->
-  <!-- <div class="columns is-centered has-text-centered">
+  <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> LLaVA: Large Language-and-Vision Assistant</h2>
+      <h2 class="title is-3">Gecko Framework</h2>
     </div>
-  </div> -->
+  </div>
   <!-- </div> -->
-  <!--/ Results. -->
-  <!-- <div class="container is-max-desktop">
+  <!-- / Results. -->
+  <div class="container is-max-desktop">
 
   <div class="columns is-centered">
     <div class="column is-full-width">
       <div class="content has-text-justified"> 
         <p>
-          LLaVa connects pre-trained <a href="https://openai.com/research/clip">CLIP ViT-L/14</a> visual encoder and large language model <a href="https://github.com/lm-sys/FastChat">Vicuna</a>, using a simple projection matrix.   We consider a two-stage instruction-tuning procedure:
-          <ul type="1">
-            <li><b>Stage 1: Pre-training for Feature Alignment</b>. <span style="font-size: 95%;">Only the projection matrix is updated, based on a subset of CC3M.</span></li>
-            <li><b>Stage 2: Fine-tuning End-to-End</b>. <span style="font-size: 95%;">Both the projection matrix and LLM are updated for two different use senarios: 
-              <ul type="1">
-                <li> <b>Visual Chat</b>: LLaVA is fine-tuned on our generated multimodal instruction-following data for daily user-oriented applications. 
-                <li> <b>Science QA</b>: LLaVA is fine-tuned on this multimodal reasonsing dataset for the science domain.</span></li>
-              </ul>  
-          </ul>  
-          Please check out our 
-          <a href="https://github.com/haotian-liu/LLaVA/blob/main/docs/MODEL_ZOO.md">[Model Zoo]</a>.
+          Gecko is a plug-and-play framework that allows Vision Language Model (VLM) to identify small objects in high-resolution images. As shown in below figure, Gecko can be summarized as follows:
         </p>
-      </div>
-      <centering>
-        <div style="text-align: center;">
-          <img id="teaser" width="70%" src="images/llava_arch.png">     
-        </div>
-
-      
-      </centering>           
+        <ol type="1">
+          <li> <b>Image Cropping</b>: Images are divided into patches that match the native resolution of the vision encoder. This ensures the preservation of fine details, especially those of small objects.</li>
+          <li> <b>Keyword Extraction</b>: We use in-context learning with a native LLM to extract the "queried object" from the provided prompt.</li>
+          <li> <b>Patch Selection</b>: The vision encoder and its text encoder counterpart leverage contrastive ability to identify and select the most relevant patches.</li>
+          <li> <b>LLM Inference</b>: The selected patches are then passed to the LLM to generate a response to the given prompt. We use <a href="https://arxiv.org/abs/2405.01483">Mantis</a> for its ability to handle multiple images effectively.</li>
+        </ol>
+        <figure style="text-align: center;">
+          <img src="static/images/Proposed Model.png" alt="Proposed Framework" width="800">
+          <figcaption style="margin-top: 15px;"><i>Figure:</i> Overview of the proposed Gecko framework. For more details, please refer to the <a href="thesis.pdf">Thesis</a>.</figcaption>
+        </figure>
+      </div>        
     </div>
   </div>
+</section>
 
+<section class="section">
+  <!-- Results. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3">Multi V* Bench</h2>
+    </div>
+  </div>
+  <!-- / Results. -->
+  
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified"> 
+          <p>
+            We adapted the Gecko framework to allow the model to find the small objects across multiple images. To test this, we curated a new benchmark called Multi V* Bench, which includes multi-image, high-resolution visual question and answer tasks with an average resolution of 1920 × 2475 pixels. The benchmark consists of four tasks, each comprising 20 samples:
+          </p>
+          <ul type="1">
+            <li><b>Attribute</b>: Identify attributes differences of an object between images. There are 43 images in total with resolution of 1920 × 2622 pixels.</li>
+            <li><b>Existence</b>: Determine if an object exists between the images. There are 47 images in total with resolution of 1920 × 2419 pixels.</li>
+            <li><b>Counting</b>: Count the number of objects among the images. There are 56 images in total with resolution of 1919 × 2467 pixels.</li>
+            <li><b>OCR</b>: Extract or identify text from the images. There are 55 images in total with resolution of 1920 × 2414 pixels.</li>
+          </ul>
 
-</section> -->
+          <!-- Subfigures Section -->
+          <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 2em;">
+            <!-- Subfigure A -->
+            <figure style="text-align: center; margin: 0;">
+              <img src="static/images/a1_1.jpg" alt="Multi Image Setup" width="380">
+              <figcaption style="margin-top: 10px;"><i>(a)</i> Figure with resolution of (1920, 2880) px.</figcaption>
+            </figure>
 
+            <!-- Subfigure B -->
+            <figure style="text-align: center; margin: 0;">
+              <img src="static/images/a1_2.jpg" alt="Patch Selection and Reasoning" width="380">
+              <figcaption style="margin-top: 10px;"><i>(b)</i> Figure with resolution of (1920, 2880) px.</figcaption>
+            </figure>
+          </div>
 
+          <!-- Caption for full figure set -->
+          <figcaption style="text-align: center; margin-top: 15px;">
+            <i>Figure:</i> One example of attribute task from Multi-V* Bench. The prompt: ”What is the
+            color difference of the motorcycle between these images?” For more details, please refer to the <a href="thesis.pdf">Thesis</a>.
+          </figcaption>
+        </div>        
+      </div>
+    </div>
+  </div>
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h3 class="title is-3">Result</h3>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="table-container">
+          <div style="overflow-x:auto; margin-top: -10px;">
+            <table style="width:100%; border-collapse: collapse; text-align: center;">
+              <thead>
+                <tr>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">Method</th>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">Attribute (%)↑</th>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">OCR (%)↑</th>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">Existence (%)↑</th>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">Count (%)↑</th>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">Overall (%)↑</th>
+                  <th style="border-bottom:1px solid #4c4c4c; padding:8px;">Inference Time (sample/s)↓</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="7" style="padding:8px; text-align:center; font-style:italic; border-top:1px solid #4c4c4c;">Open‑source models</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2405.01483">Mantis‑CLIP ‡</a></td>
+                  <td style="padding:8px;">35.0</td>
+                  <td style="padding:8px;">20.0</td>
+                  <td style="padding:8px;">35.0</td>
+                  <td style="padding:8px;">30.0</td>
+                  <td style="padding:8px;">30.0</td>
+                  <td style="padding:8px;"><b>0.749</b></td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2405.01483">Mantis‑SigLIP ‡</a></td>
+                  <td style="padding:8px;">50.0</td>
+                  <td style="padding:8px;">50.0</td>
+                  <td style="padding:8px;">25.0</td>
+                  <td style="padding:8px;">50.0</td>
+                  <td style="padding:8px;">43.75</td>
+                  <td style="padding:8px;">0.774</td>
+                </tr>
+                <tr>
+                  <td colspan="7" style="padding:8px; text-align:center; font-style:italic;">High resolution models</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="#">LLaVA‑NeXT‑Interleave</a></td>
+                  <td style="padding:8px;">50.0</td>
+                  <td style="padding:8px;">45.0</td>
+                  <td style="padding:8px;">45.0</td>
+                  <td style="padding:8px;">35.0</td>
+                  <td style="padding:8px;">43.75</td>
+                  <td style="padding:8px;">0.852</td>
+                </tr>
+                <tr>
+                  <td colspan="7" style="padding:8px; text-align:center; font-style:italic; border-top:1px solid #4c4c4c;">Private models</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2303.08774">GPT‑4V Preview</a></td>
+                  <td style="padding:8px;">30.0</td>
+                  <td style="padding:8px;">60.0</td>
+                  <td style="padding:8px;">45.0</td>
+                  <td style="padding:8px;">25.0</td>
+                  <td style="padding:8px;">40.0</td>
+                  <td style="padding:8px;">–</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2303.08774">GPT‑4 Turbo</a></td>
+                  <td style="padding:8px;">35.0</td>
+                  <td style="padding:8px;">60.0</td>
+                  <td style="padding:8px;">45.0</td>
+                  <td style="padding:8px;">20.0</td>
+                  <td style="padding:8px;">40.0</td>
+                  <td style="padding:8px;">–</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2303.08774">GPT‑4o</a></td>
+                  <td style="padding:8px;"><b>70.0</b></td>
+                  <td style="padding:8px;">65.0</td>
+                  <td style="padding:8px;"><b>55.0</b></td>
+                  <td style="padding:8px;"><b>55.0</b></td>
+                  <td style="padding:8px;"><b>61.25</b></td>
+                  <td style="padding:8px;">–</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;"><a href="https://arxiv.org/abs/2303.08774">GPT‑4o Mini</a></td>
+                  <td style="padding:8px;">45.0</td>
+                  <td style="padding:8px;">65.0</td>
+                  <td style="padding:8px;">50.0</td>
+                  <td style="padding:8px;">15.0</td>
+                  <td style="padding:8px;">43.75</td>
+                  <td style="padding:8px;">–</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;">Ours‑CLIP</td>
+                  <td style="padding:8px;">60.0</td>
+                  <td style="padding:8px;">50.0</td>
+                  <td style="padding:8px;">45.0</td>
+                  <td style="padding:8px;">45.0</td>
+                  <td style="padding:8px;">50.0</td>
+                  <td style="padding:8px;">8.099</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px;">Ours‑SigLIP</td>
+                  <td style="padding:8px;">45.0</td>
+                  <td style="padding:8px;"><b>75.0</b></td>
+                  <td style="padding:8px;">45.0</td>
+                  <td style="padding:8px;">40.0</td>
+                  <td style="padding:8px;">51.25</td>
+                  <td style="padding:8px;">7.194</td>
+                </tr>
+              </tbody>
+            </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
 
   <!-- <section class="section"> -->
   <!-- Results. -->
